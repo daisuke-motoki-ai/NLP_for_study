@@ -1,10 +1,13 @@
-# Jupyter上でNLPを利用するための仮想環境
-## Docker-composeを用いた仮想環境の立ち上げと終了
-jupyter-Jij/middleware ディレクトリから以下のコマンドで立ち上げ
+# Docker-composeを用いた仮想環境の立ち上げと終了
 
 ```sh
-docker-compose -f docker-compose.yml down && docker-compose -f docker-compose.yml up -d --build && docker-compose exec science bash
+cd NLP_for_study/middleware
+
+docker-compose -f docker-compose.yml down && docker-compos
+e -f docker-compose.yml up -d --build && docker-compose exec shell tmux
 ```
+
+# jupyter環境へのアクセス
 
 以下のコマンドをブラウザ上のURLに書き込む
 
@@ -12,12 +15,28 @@ docker-compose -f docker-compose.yml down && docker-compose -f docker-compose.ym
 http://localhost:8285/
 ```
 
+# webフレームワークFlaskの実行
+
+コンテナ内部で
+
+```sh
+cd webapi
+
+python app.py
+
+```
+で以下にアクセス
+
+```sh
+http://0.0.0.0:5000/ 
+```
+
 
 コンテナ内部に入っているので、Ctrl + D でexit すればjupyterアプリケーションは終了する。
 
-## モジュールのインストール
+# モジュールのインストール
 
-Jupyter-Jij/middleware/jupyter_science/Dockerfile のコメントアウトの所を適宜変更して、必要なモジュールをインストール。
+NLP_for_study/middleware/python_module/Dockerfile のコメントアウトの所を適宜変更して、必要なモジュールをインストール。
 ```sh
 FROM jupyter/datascience-notebook
 MAINTAINER  motoki daisuke <motto.smiley1123@gmail.com>
