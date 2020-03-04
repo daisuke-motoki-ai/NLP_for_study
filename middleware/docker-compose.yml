@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  jupyter:
+    build: jupyter
+    depends_on:
+      - python_module
+    ports:
+      - "5005:5000"
+      - "8285:8888"
+    volumes:
+      - ../software:/home/jovyan/notebook
+    working_dir: /home/jovyan/notebook/jupyter
+    command: jupyter notebook --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
+
+  shell:
+    build: shell
+    depends_on:
+      - python_module
+    ports:
+      - "5000:5000"
+    volumes: # shell x > ./shell o
+      - ../../setting:/home/jovyan
+      - ../software:/home/jovyan/notebook
+    working_dir: /home/jovyan/notebook/
+    command: tmux
+    tty: true # avoid container stopping
+
+  python_module:
+    build: python_module

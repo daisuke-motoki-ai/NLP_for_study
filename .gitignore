@@ -1,0 +1,26 @@
+*.swp
+git_log_memo
+
+# software
+.ipynb_checkpoints/
+*.so
+*.pyc
+*.c
+*.eps
+__pychche__
+tags
+# Makefile
+.cache
+build
+*.txt
+*.html
+
+ipynb2
+hoge_pala
+
+
+
+# software/jupyter/*
+software/jovyan/*
+software/*.*
+!.gitkeep
