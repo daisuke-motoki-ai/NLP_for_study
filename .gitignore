@@ -13,7 +13,6 @@ tags
 .cache
 build
 *.txt
-*.html
 
 ipynb2
 hoge_pala
