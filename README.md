@@ -19,9 +19,7 @@ http://localhost:8285/
 コンテナ内部で
 
 ```sh
-cd webapi
-
-python app.py
+cd webapi && python app.py
 
 ```
 で以下にアクセス
