@@ -3,8 +3,7 @@
 ```sh
 cd NLP_for_study/middleware
 
-docker-compose -f docker-compose.yml down && docker-compos
-e -f docker-compose.yml up -d --build && docker-compose exec shell tmux
+docker-compose -f docker-compose.yml down && docker-compose -f docker-compose.yml up -d --build && docker-compose exec shell tmux
 ```
 
 # jupyter環境へのアクセス
