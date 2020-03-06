@@ -70,7 +70,6 @@ def index():
 @app.route('/post', methods=['POST', 'GET'])
 def post():
 
-
     title = ""
     if request.method == 'POST':
 
@@ -88,10 +87,6 @@ def post():
         predictions = dialogue_agent.predict([input_text])
         predicted_class_id = predictions[0]
 
-
-
-
-
         words = replies[predicted_class_id]
         return render_template('index.html',
                                name=words, title=title)
@@ -101,3 +96,4 @@ def post():
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0')
+    #app.run()
