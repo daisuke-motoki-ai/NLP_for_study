@@ -18,11 +18,6 @@ http://localhost:8285/
 
 # webフレームワークFlaskの実行
 
-コンテナ内部で
-
-```sh
-cd webapi && python app.py
-
 ```
 で以下にアクセス
 
@@ -30,8 +25,17 @@ cd webapi && python app.py
 http://0.0.0.0:5000/ 
 ```
 
+# 終了の仕方
 
-コンテナ内部に入っているので、Ctrl + D でexit すればjupyterアプリケーションは終了する。
+
+shell コンテナ内部に入っているので、Ctrl + D でコンテナから出ることができる。
+
+コンテナを終了する際は以下
+
+```
+docker-compose -f docker-compose.yml down
+```
+
 
 # モジュールのインストール
 
