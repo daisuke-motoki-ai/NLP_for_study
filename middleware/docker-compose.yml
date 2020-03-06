@@ -24,8 +24,6 @@ services:
       - ../software:/home/jovyan/notebook
     working_dir: /home/jovyan/notebook/webapi
     command: python app.py
-    # working_dir: /home/jovyan/notebook/
-    # command: tmux
     tty: true # avoid container stopping
 
   python_module:
