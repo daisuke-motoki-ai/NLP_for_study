@@ -1,6 +1,8 @@
 # Docker-composeを用いた仮想環境の立ち上げと終了
 
 ```sh
+git clone https://github.com/daisuke-motoki-ai/NLP_for_study.git
+
 cd NLP_for_study/middleware
 
 docker-compose -f docker-compose.yml down && docker-compose -f docker-compose.yml up -d --build && docker-compose exec shell tmux
