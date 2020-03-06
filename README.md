@@ -12,18 +12,15 @@ docker-compose -f docker-compose.yml down && docker-compose -f docker-compose.ym
 
 以下のコマンドをブラウザ上のURLに書き込む
 
-```sh
 http://localhost:8285/
-```
+
 
 # webフレームワークFlaskの実行
 
-```
-で以下にアクセス
+以下にアクセス
 
-```sh
 http://0.0.0.0:5000/ 
-```
+
 
 # 終了の仕方
 
