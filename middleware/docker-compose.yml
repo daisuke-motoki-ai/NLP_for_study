@@ -22,8 +22,10 @@ services:
     volumes: # shell x > ./shell o
       - ../../setting:/home/jovyan
       - ../software:/home/jovyan/notebook
-    working_dir: /home/jovyan/notebook/
-    command: tmux
+    working_dir: /home/jovyan/notebook/webapi
+    command: python app.py
+    # working_dir: /home/jovyan/notebook/
+    # command: tmux
     tty: true # avoid container stopping
 
   python_module:
