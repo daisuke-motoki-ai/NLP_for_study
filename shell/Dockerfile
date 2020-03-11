@@ -43,3 +43,14 @@ RUN cp peco /usr/local/bin
 
 RUN pip install autopep8
 RUN pip install flake8
+
+# WORKDIR /home/jovyan
+# VOLUME ../../setting
+# WORKDIR /home/jovyan/notebook
+# VOLUME ../software/webapi
+# 
+# WORKDIR /home/jovyan/notebook/webapi
+# EXPOSE 5000
+# ADD ./webapi /home/jovyan/notebook/webapi
+# WORKDIR /home/jovyan/notebook/webapi
+#RUN ["python", "app.py"]

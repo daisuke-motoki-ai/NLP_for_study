@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  jupyter:
+    build: jupyter
+    depends_on:
+      - python
+    ports:
+      - "8285:8888"
+    volumes:
+      - ./local/jupyter:/home/jovyan/notebook
+    working_dir: /home/jovyan/notebook
+    command: jupyter notebook --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
+
+  shell:
+    build: shell
+    depends_on:
+      - python
+    tty: true # avoid container stopping
+
+  python:
+    build: python
+
+  webapi:
+    build: webapi
+    ports:
+      - "8080:8080"
