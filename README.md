@@ -1,28 +1,28 @@
+* k8s導入後かなりフォルダ構成が汚くなりました。。
+
 # Docker-composeを用いた仮想環境の立ち上げと終了
 
 ```sh
 git clone https://github.com/daisuke-motoki-ai/NLP_for_study.git
 
-cd NLP_for_study/middleware
-
 docker-compose -f docker-compose.yml down && docker-compose -f docker-compose.yml up -d --build && docker-compose exec shell tmux
 ```
 
-# jupyter環境へのアクセス
+## jupyter環境へのアクセス
 
 以下のコマンドをブラウザ上のURLに書き込む
 
 http://localhost:8285/
 
 
-# webフレームワークFlaskの実行
+## webフレームワークFlaskの実行
 
 以下にアクセス
 
-http://0.0.0.0:5000/ 
+http://0.0.0.0:8080/ 
 
 
-# 終了の仕方
+## 終了の仕方
 
 
 shell コンテナ内部に入っているので、Ctrl + D でコンテナから出ることができる。
@@ -31,6 +31,16 @@ shell コンテナ内部に入っているので、Ctrl + D でコンテナか�
 
 ```
 docker-compose -f docker-compose.yml down
+```
+
+# Kubernates を用いたGKEへのデプロイ
+
+各種設定後に以下コマンド
+
+$PROJECT_IDは各自設定する
+
+```
+gcloud builds submit --tag gcr.io/$PROJECT_ID/helloworld-gke . && kubectl apply -f ../K8s/deployment.yaml && kubectl apply -f ../K8s/service.yaml
 ```
 
 
