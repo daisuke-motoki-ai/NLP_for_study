@@ -1,4 +1,4 @@
-FROM middleware_python_module
+FROM nlp_for_k8s_python
 MAINTAINER  motoki daisuke <motto.smiley1123@gmail.com>
 
 #  ref https://github.com/pollenjp/shell_script_for_setup/blob/30daf8f14e7e71b60af0a9fa04c3771121d6f93c/python-setup/pyenv-default-python3.5.2/pyenv-default-python3.5.2-install_jupyter-extensions.sh
