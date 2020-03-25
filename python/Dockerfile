@@ -18,11 +18,9 @@ RUN yes | pip install --quiet --no-cache-dir \
     scikit-image 
 RUN yes | pip install --quiet --no-cache-dir \
     imgaug \
-    pycocotools 
-RUN yes | pip install --quiet --no-cache-dir \
-    tensorflow==1.15
-
-    # keras==2.1.1
+    pycocotools \
+    tensorflow==1.15 \
+    keras==2.1.1
     # keras==2.2.5 \
     # tensorflow==1.15.0 \
     # opencv-python==3.4.5.20
