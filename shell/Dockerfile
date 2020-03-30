@@ -1,4 +1,5 @@
-FROM nlp_for_k8s_python
+# FROM nlp_for_k8s_python
+FROM python
 MAINTAINER  motoki daisuke <motto.smiley1123@gmail.com>
 #####------------------------------
 #####  shell & editor environment 
