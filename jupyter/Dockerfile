@@ -11,7 +11,7 @@ USER root
 RUN apt-get update && apt-get install -yq --no-install-recommends \
     git
 
-USER $NB_USER
+# USER $NB_USER
 # ENTRYPOINT ["tini", "--"]
 
 RUN yes | pip install --upgrade pip
@@ -50,6 +50,10 @@ RUN pip install torch==1.4.0
 RUN pip install camelot-py[cv] 
 
 # mecab関連
-RUN apt -y install  mecab
+RUN apt -y install mecab
 RUN apt -y install libmecab-dev
 RUN apt -y install mecab-ipadic-utf8
+RUN pip install mecab
+
+# sklearn 導入
+RUN pip install sklearn
