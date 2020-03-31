@@ -35,11 +35,16 @@ docker-compose -f docker-compose.yml down
 
 # Kubernates を用いたGKEへのデプロイ
 
+macの方はこちらでgcloud コマンドを使えるようにしておく
+
+https://cloud.google.com/sdk/docs/quickstarts?hl=ja
+
 各種設定後に以下コマンド
 
 $PROJECT_IDは各自設定する
 
 ```
+cd webapi/
 gcloud builds submit --tag gcr.io/$PROJECT_ID/helloworld-gke . && kubectl apply -f ../K8s/deployment.yaml && kubectl apply -f ../K8s/service.yaml
 ```
 
