@@ -12,12 +12,6 @@ services:
     working_dir: /home/jovyan/notebook
     command: jupyter notebook --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
 
-  # shell:
-  #   build: shell
-  #   depends_on:
-  #     - python
-  #   tty: true # avoid container stopping
-
   python:
     build: python
 
