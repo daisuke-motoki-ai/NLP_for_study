@@ -1,5 +1,7 @@
 *.swp
 git_log_memo
+*.png
+rm/
 
 # software
 .ipynb_checkpoints/
