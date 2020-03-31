@@ -2,6 +2,7 @@
 git_log_memo
 *.png
 rm/
+.DS_Store
 
 # software
 .ipynb_checkpoints/
